@@ -1,0 +1,42 @@
+This is the organizing document for developing an R package for interacting with the EPA restful data API.  There are a few things I am interested now in beginning to look up. 
+
+
+* Useful Websites: 
+https://www.epa.gov/enviro/envirofacts-data-service-api
+
+URL for API: https://iaspub.epa.gov/enviro/efservice/
+
+https://www.epa.gov/enviro/about-data
+
+https://www.r-bloggers.com/accessing-apis-from-r-and-a-little-r-programming/ this is a useful introduction to working with APIs in R 
+
+
+* TODO get familiar with the EPA api 
+** TODO How are the tables set up? 
+- this website provides a pretty good overview of the different datasets. 
+
+https://www.epa.gov/enviro/about-data
+
+
+** DONE can we access previous years? This is crucial
+- yes. Haven't Figured out how to do that from the API yet though. 
+- reporting year is probably in Form R 
+
+** TODO can we successfully use the dataset? 
+
+
+I think the best approach is to focus on one database at a time and add a function for accessing each. Then at the end we can combine them all into one meta-function. 
+
+* TODO How do you use an api from R? 
+
+* TODO Look at the source code for other api packages. 
+** TODO what are common functions? 
+** TODO features? 
+** TODO what kinds of error messages do they provide? 
+
+* What do I actually need? 
+
+** TODO TRI data for Rhode Island - all years 
+** TODO ACRES data for Rhode Island - all years
+** TODO FRS data for Rhode Island - all years 
+
