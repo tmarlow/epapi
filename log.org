@@ -31,11 +31,32 @@ I think the best approach is to focus on one database at a time and add a functi
 
 https://www.r-bloggers.com/accessing-apis-from-r-and-a-little-r-programming/ this is a useful introduction to working with APIs in R 
 
-* TODO How do I access particular years from EPA API? 
+* DONE How do I access particular years from EPA API? 
+I emailed the EPA and the responded: 
+
+You can specify the reporting year with requests to the data API as long as the REPORTING_YEAR column is included in a table that is part of your API request. The REPORTING_YEAR  metadata page at https://oaspub.epa.gov/enviro/EF_METADATA_HTML.tri_page?p_column_name=REPORTING_YEAR shows the tables that include REPORTING_YEAR which are the following:
+
+TRI_FACILITY_NAICS_HISTORY
+TRI_FACILITY_NPDES_HISTORY
+TRI_FACILITY_DB_HISTORY
+TRI_FACILITY_RCRA_HISTORY
+TRI_FACILITY_HISTORY
+TRI_FORM_R_FACILITY
+TRI_REPORTING_FORM
+TRI_FACILITY_SIC_HISTORY
+TRI_FACILITY_UIC_HISTORY
+The default output is "=" and does not require an operator when searching for a specific year, but you can enter "<", " >" to get a range of anything prior to or after an entered year.
+
 
 * What do I actually need? 
 
-** TODO TRI data for Rhode Island - all years 
+** TODO TRI data for Rhode Island - all years
+- TODO now I need to link TRI_facility_ID to FORM_R that has all the release
+
+**** TODO select only the id, reporting year
+**** TODO download facility data again. or form_R that has releases
+
+ 
 ** TODO ACRES data for Rhode Island - all years
 ** TODO FRS data for Rhode Island - all years 
 
