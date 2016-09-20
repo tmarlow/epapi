@@ -11,8 +11,8 @@ https://www.epa.gov/enviro/about-data
 https://www.r-bloggers.com/accessing-apis-from-r-and-a-little-r-programming/ this is a useful introduction to working with APIs in R 
 
 
-* TODO get familiar with the EPA api 
-** TODO How are the tables set up? 
+* DONE get familiar with the EPA api 
+** DONE How are the tables set up? 
 - this website provides a pretty good overview of the different datasets. 
 
 https://www.epa.gov/enviro/about-data
@@ -22,17 +22,16 @@ https://www.epa.gov/enviro/about-data
 - yes. Haven't Figured out how to do that from the API yet though. 
 - reporting year is probably in Form R 
 
-** TODO can we successfully use the dataset? 
-
+** DONE can we successfully use the dataset? 
+Yep In the file test_function.R I successfully downloaded RI TRI data from 2015. 
 
 I think the best approach is to focus on one database at a time and add a function for accessing each. Then at the end we can combine them all into one meta-function. 
 
-* TODO How do you use an api from R? 
+* DONE How do you use an api from R? 
 
-* TODO Look at the source code for other api packages. 
-** TODO what are common functions? 
-** TODO features? 
-** TODO what kinds of error messages do they provide? 
+https://www.r-bloggers.com/accessing-apis-from-r-and-a-little-r-programming/ this is a useful introduction to working with APIs in R 
+
+* TODO How do I access particular years from EPA API? 
 
 * What do I actually need? 
 
@@ -40,3 +39,10 @@ I think the best approach is to focus on one database at a time and add a functi
 ** TODO ACRES data for Rhode Island - all years
 ** TODO FRS data for Rhode Island - all years 
 
+
+* TODO Look at the source code for other api packages. 
+** TODO what are common functions? 
+** TODO features? 
+** TODO what kinds of error messages do they provide? 
+
+https://iaspub.epa.gov/enviro/tri_formr_v2.fac_list/tri_formr.fac_list?rptyear=2007&facopt=fac_name&fvalue=&fac_search=fac_beginning&postal_code=&city_name=&county_name=&state_code=RI&industry_type=&bia_code=&tribe_Name=&tribe_search=fac_beginning
