@@ -11,7 +11,9 @@ https://www.epa.gov/enviro/about-data
 https://www.r-bloggers.com/accessing-apis-from-r-and-a-little-r-programming/ this is a useful introduction to working with APIs in R 
 
 
-* DONE get familiar with the EPA api 
+https://www.epa.gov/enviro/tri-model this has the data model for TRI. It is kind of confusing so it is worth spending some time here figuring out how things are connected. 
+
+*** DONE get familiar with the EPA api 
 ** DONE How are the tables set up? 
 - this website provides a pretty good overview of the different datasets. 
 
@@ -27,11 +29,11 @@ Yep In the file test_function.R I successfully downloaded RI TRI data from 2015.
 
 I think the best approach is to focus on one database at a time and add a function for accessing each. Then at the end we can combine them all into one meta-function. 
 
-* DONE How do you use an api from R? 
+*** DONE How do you use an api from R? 
 
 https://www.r-bloggers.com/accessing-apis-from-r-and-a-little-r-programming/ this is a useful introduction to working with APIs in R 
 
-* DONE How do I access particular years from EPA API? 
+*** DONE How do I access particular years from EPA API? 
 I emailed the EPA and the responded: 
 
 You can specify the reporting year with requests to the data API as long as the REPORTING_YEAR column is included in a table that is part of your API request. The REPORTING_YEAR  metadata page at https://oaspub.epa.gov/enviro/EF_METADATA_HTML.tri_page?p_column_name=REPORTING_YEAR shows the tables that include REPORTING_YEAR which are the following:
@@ -47,23 +49,25 @@ TRI_FACILITY_SIC_HISTORY
 TRI_FACILITY_UIC_HISTORY
 The default output is "=" and does not require an operator when searching for a specific year, but you can enter "<", " >" to get a range of anything prior to or after an entered year.
 
-
-* What do I actually need? 
-
-** TODO TRI data for Rhode Island - all years
+** DONE TRI data for Rhode Island - all years
 - TODO now I need to link TRI_facility_ID to FORM_R that has all the release
 
 **** TODO select only the id, reporting year
 **** TODO download facility data again. or form_R that has releases
 
- 
-** TODO ACRES data for Rhode Island - all years
-** TODO FRS data for Rhode Island - all years 
 
 
-* TODO Look at the source code for other api packages. 
+ TODO Look at the source code for other api packages. 
 ** TODO what are common functions? 
 ** TODO features? 
 ** TODO what kinds of error messages do they provide? 
 
 https://iaspub.epa.gov/enviro/tri_formr_v2.fac_list/tri_formr.fac_list?rptyear=2007&facopt=fac_name&fvalue=&fac_search=fac_beginning&postal_code=&city_name=&county_name=&state_code=RI&industry_type=&bia_code=&tribe_Name=&tribe_search=fac_beginning
+
+
+**** DONE get a list of facility ids
+
+**** DONE for each list of facility ids query tri_reporting_form 
+
+**** TODO get list of doc_cntrl_num
+**** TODO for each doc_cntrl_num from tri_reporting_form query tri_release_qty
